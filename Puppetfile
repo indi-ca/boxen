@@ -75,7 +75,7 @@ github "xquartz",     "1.2.1"
 # https://github.com/boxen.
 github "python",      "3.0.0", :repo => "mloberg/puppet-python"
 
-# github "sublime_text_2",  "1.1.1"
+github "sublime_text",    "1.1.0"
 github "iterm2",          "1.2.4"
 # github "chrome",          "1.1.0"
 # github "skype",           "1.0.3"

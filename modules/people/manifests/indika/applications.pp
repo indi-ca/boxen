@@ -1,6 +1,6 @@
 class people::indika::applications {
 
-  # include sublime_text_2
+  include sublime_text
 
   include iterm2::dev
   include iterm2::colors::arthur

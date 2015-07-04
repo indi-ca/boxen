@@ -18,4 +18,11 @@ class people::indika::frictionless {
     group => 'staff',
     require => Vcsrepo['/Users/indika/dev/frictionless']
   }
+
+  package { 'Ukelele':
+    provider => 'appdmg',
+    source   => "http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Ukelele_2.2.8&filename=Ukelele_2.2.8.dmg",
+  }
+
+  #http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Ukelele_2.2.8&filename=Ukelele_2.2.8.dmg
 }
