@@ -1,0 +1,42 @@
+Host *
+    ControlMaster auto
+    ControlPath ~/.ssh/control/%r@%h:%p
+    ControlPersist 32400
+
+ServerAliveInterval 60
+ConnectTimeout 30
+
+
+Host build.nb
+    User ipiyasena
+    ForwardAgent yes
+
+Host srm
+    Hostname 10.107.11.246
+    Port 22
+    User root
+    IdentityFile ~/.ssh/id_rsa_vm
+
+Host lyncadmin
+    Hostname 10.12.101.11
+    Port 22
+    User Administrator
+    IdentityFile ~/.ssh/id_rsa_vm
+
+Host winsvr
+    Hostname 10.12.11.186
+    Port 22
+    User Administrator
+    IdentityFile ~/.ssh/id_rsa_vm
+
+Host shan
+    Hostname 192.168.0.65
+    Port 22
+    User root
+    IdentityFile ~/.ssh/id_rsa_vm
+
+Host rain
+    Hostname 192.168.0.250
+    Port 4
+    User root
+    IdentityFile ~/.ssh/id_rsa_vm

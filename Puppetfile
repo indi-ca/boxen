@@ -65,3 +65,39 @@ github "xquartz",     "1.2.1"
 # github "postgresql",  "3.0.3"
 # github "redis",       "3.1.0"
 # github "sysctl",      "1.0.1"
+
+
+# An official boxen module
+# https://github.com/boxen/puppet-brewcask
+# Which means that I just have the following line
+
+# Optional/custom modules. There are tons available at
+# https://github.com/boxen.
+github "python",      "3.0.0", :repo => "mloberg/puppet-python"
+
+# github "sublime_text_2",  "1.1.1"
+github "iterm2",          "1.2.4"
+# github "chrome",          "1.1.0"
+# github "skype",           "1.0.3"
+# github "teamviewer",      "1.0.1"
+# github "dropbox",         "1.1.1"
+# github "clipmenu",        "1.0.0"
+# github "transmission",    "1.1.0"
+# github "java",            "1.1.2"
+github "firefox",         "1.2.3"
+# github "osx",             "1.4.0", :repo => "felho/puppet-osx"
+github "vlc",             "1.1.0"
+# github "adobe_reader",    "1.0.1"
+# github "alfred",          "1.1.1"
+# github "viscosity",       "1.0.0"
+# github "bettertouchtool", "1.0.0", :repo => "lucadegasperi/puppet-bettertouchtool"
+# github "handbrake",       "1.0.1"
+# github "vagrant",         "2.0.10"
+
+
+# Pure Puppet modules
+forge "https://forgeapi.puppetlabs.com"
+
+mod 'puppetlabs/vcsrepo',
+   :git => 'https://github.com/puppetlabs/puppetlabs-vcsrepo.git',
+   :ref => '1.2.0'
