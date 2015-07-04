@@ -16,6 +16,11 @@ GITHUBTARBALL
     brewcask (0.0.6)
 
 GITHUBTARBALL
+  remote: boxen/puppet-chrome
+  specs:
+    chrome (1.2.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
     dnsmasq (2.0.1)
@@ -96,6 +101,11 @@ GITHUBTARBALL
     ruby (8.5.2)
 
 GITHUBTARBALL
+  remote: boxen/puppet-skype
+  specs:
+    skype (1.1.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-sublime_text
   specs:
     sublime_text (1.1.0)
@@ -138,6 +148,7 @@ GITHUBTARBALL
 DEPENDENCIES
   boxen (= 3.10.4)
   brewcask (= 0.0.6)
+  chrome (= 1.2.0)
   dnsmasq (= 2.0.1)
   firefox (= 1.2.3)
   foreman (= 1.2.0)
@@ -158,9 +169,11 @@ DEPENDENCIES
   python (= 3.0.0)
   repository (= 2.4.1)
   ruby (= 8.5.2)
+  skype (= 1.1.0)
   stdlib (= 4.2.1)
   sublime_text (= 1.1.0)
   sudo (= 1.0.0)
   vlc (= 1.1.0)
+  xquartz (= 1.2.1)
   xquartz (= 1.2.1)
 

@@ -4,6 +4,8 @@
 
 class people::indika::homebrew_packages {
 
+    homebrew::tap { 'homebrew/x11': }
+
     package {
       [
         'ag',       # The silver searcher
@@ -13,7 +15,7 @@ class people::indika::homebrew_packages {
         'mtr',
         'pass',
         'pstree',
-        'rdesktop',
+        'rdesktop',       # This does not work
         'tree',
         'watch',
         'wget',

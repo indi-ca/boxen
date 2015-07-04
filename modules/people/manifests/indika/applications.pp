@@ -9,8 +9,8 @@ class people::indika::applications {
   include iterm2::colors::solarized_dark
   include iterm2::colors::zenburn
 
-  # include chrome
-  # include skype
+  include chrome
+  include skype
   # include teamviewer
   # include dropbox
   # include clipmenu
@@ -18,6 +18,7 @@ class people::indika::applications {
   # include java
   include firefox
   include vlc
+  include xquartz
   # include adobe_reader
   # include people::felho::applications::myphonedesktop
   # include alfred
