@@ -11,6 +11,7 @@ class people::indika {
 
 
     include people::indika::networking
+    include people::indika::frictionless
     include people::indika::applications
     include people::indika::application_settings
     include people::indika::homebrew_packages
@@ -30,12 +31,6 @@ class people::indika {
     #     ensure => "stopped",
     # }
 
-
-    vcsrepo { "/Users/indika/dev/frictionless":
-      ensure   => present,
-      provider => git,
-      source   => "https://github.com/indika/frictionless.git",
-    }
 
     vcsrepo { "/Users/indika/dev/functional":
       ensure   => present,
