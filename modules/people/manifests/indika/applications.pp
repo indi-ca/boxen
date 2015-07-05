@@ -29,7 +29,7 @@ class people::indika::applications {
   # include people::felho::applications::clipgrab
   include people::indika::applications::spotifree
   include people::indika::applications::rubymine
-  # include people::indika::applications::pycharm
+  include people::indika::applications::pycharm
 
   # Handbrake is not mounting correctly
   # include handbrake
