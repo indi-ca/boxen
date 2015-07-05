@@ -18,6 +18,7 @@ class people::indika::applications {
   # include java
   include firefox
   include vlc
+  include spotify
   include xquartz
   # include adobe_reader
   # include people::felho::applications::myphonedesktop
