@@ -12,6 +12,7 @@ class people::indika {
 
     include people::indika::networking
     include people::indika::frictionless
+    include people::indika::osx_settings
     include people::indika::applications
     include people::indika::application_settings
     include people::indika::homebrew_packages

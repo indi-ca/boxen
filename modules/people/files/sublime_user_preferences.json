@@ -18,7 +18,7 @@
 	"ignored_packages":
 	[
 	],
-	"line_numbers": false,
+	"line_numbers": true,
 	"save_on_focus_lost": true,
 	"spell_check": false,
 	"tab_size": 4,
