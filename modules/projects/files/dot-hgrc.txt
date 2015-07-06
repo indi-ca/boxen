@@ -1,0 +1,55 @@
+%include ~/internal/nb-devtools/hg/nbhgrc
+
+
+#[web]
+#cacerts = ~/dev/box/certificates/nbbdev.crt
+
+[hostfingerprints]
+hg.nb = 03:e7:aa:18:a2:df:55:ed:48:a1:d9:bf:b3:bf:48:7b:22:5a:90:b6
+
+[extensions]
+nb = ~/dev/box/internal/nb-devtools/modules/nbhg.py
+
+[extensions]
+transplant =
+mercurial_keyring =
+fetch =
+color =
+graphlog =
+pager =
+bookmarks =
+record =
+rebase =
+progress =
+mq =
+purge =
+shelve =
+#hgcanttype =                               #TODO: Consider installing this
+largefiles =
+#crecord=~/Hacking/crecord/crecord          #TODO: Install crecord
+histedit =
+
+[pager]
+pager = LESS='FSRX' less
+ignore = version, help, update, serve, record
+
+[ui]
+ignore = ~/.hgignore
+username = ipiyasena
+
+[paths]
+netbox = https://hg.nb/nbx/netbox
+internal = https://hg.nb/nbx/internal
+safechat = https://hg.nb/nbx/safechat
+
+[auth]
+nbx.schemes = https
+nbx.prefix = hg.nb/nbx
+nbx.username = ipiyasena
+
+[merge-tools]
+meld.gui = True
+meld.checkchanged = True
+meld.premerge = True
+meld.args = --label='local' $local --label='merged' $base --label='other' $other -o $output
+meld.diffargs = -a --label='$plabel1' $parent --label='$clabel' $child
