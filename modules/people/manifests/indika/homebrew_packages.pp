@@ -8,14 +8,14 @@ class people::indika::homebrew_packages {
 
     package {
       [
-        'ag',       # The silver searcher
-        'fdupes',   # File duplicates
+        'ag',               # The silver searcher
+        'fdupes',           # File duplicates
         'gradle',
         'hub',
         'mtr',
         'pass',
         'pstree',
-        'rdesktop',       # This does not work
+        'rdesktop',
         'tree',
         'watch',
         'wget',
