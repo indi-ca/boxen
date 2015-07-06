@@ -9,6 +9,7 @@ class people::indika::applications {
   include iterm2::colors::solarized_dark
   include iterm2::colors::zenburn
 
+  # include chicken_of_the_vnc
   include chrome
   include skype
   # include teamviewer
@@ -20,6 +21,7 @@ class people::indika::applications {
   include vlc
   include spotify
   include teamviewer
+  include virtualbox
   include xquartz
   # include adobe_reader
   # include people::felho::applications::myphonedesktop

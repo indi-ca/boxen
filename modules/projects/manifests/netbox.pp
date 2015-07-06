@@ -1,5 +1,7 @@
 class projects::netbox {
+
     include python
+    include projects::netbox::mercurial
 
     # They end up here
     #/opt/boxen/pyenv/versions
