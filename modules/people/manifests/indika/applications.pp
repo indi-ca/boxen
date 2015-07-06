@@ -19,6 +19,7 @@ class people::indika::applications {
   include firefox
   include vlc
   include spotify
+  include teamviewer
   include xquartz
   # include adobe_reader
   # include people::felho::applications::myphonedesktop

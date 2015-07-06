@@ -2,7 +2,7 @@
 
 
 #[web]
-#cacerts = ~/dev/box/certificates/nbbdev.crt
+#cacerts = ~/dev/certificates/nbbdev.crt
 
 [hostfingerprints]
 hg.nb = 03:e7:aa:18:a2:df:55:ed:48:a1:d9:bf:b3:bf:48:7b:22:5a:90:b6

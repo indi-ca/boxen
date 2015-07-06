@@ -29,11 +29,23 @@ class projects::netbox {
     }
 
 
+    # Set up the PIP configuration
+    file { 'pip_conf_dir':
+        ensure   => directory,
+        path     => '/Users/indika/.pip',
+        owner    => 'indika',
+        group    => 'staff',
+        mode     => 755,
+    }
 
-    # For MSSQL dev
-    # brew install freetds
-    # pip install pymssql
-
+    file { '/Users/indika/.pip/pip.conf':
+        ensure   => present,
+        source => 'puppet:///modules/projects/dot-pip-conf.txt',
+        owner    => 'indika',
+        group    => 'staff',
+        mode     => 644,
+    require => File['pip_conf_dir']
+  }
 
 
 }
