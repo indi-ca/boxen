@@ -4,7 +4,7 @@ class people::indika {
 
     $host_name = $::hostname
 
-#TODO: Try to create a notice regarding this variable
+    #TODO: Try to create a notice regarding this variable
     notice("Computer name is ${computer_name}")
     notice("Hostname name is ${host_name}")
     notice("User is ${user}")
@@ -31,6 +31,18 @@ class people::indika {
     # service {"dev.dnsmasq":
     #     ensure => "stopped",
     # }
+
+
+    # This is a bootstrap repo
+
+
+    vcsrepo { "/Users/indika/dev/config":
+      ensure   => present,
+      provider => git,
+      source   => "https://github.com/indika/config.git",
+      owner    => 'indika',
+      group    => 'staff',
+    }
 
 
     vcsrepo { "/Users/indika/dev/functional":

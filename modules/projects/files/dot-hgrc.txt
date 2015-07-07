@@ -1,8 +1,8 @@
 %include ~/internal/nb-devtools/hg/nbhgrc
 
 
-#[web]
-#cacerts = ~/dev/certificates/nbbdev.crt
+[web]
+cacerts = ~/dev/certificates/nbbdev.crt
 
 [hostfingerprints]
 hg.nb = 03:e7:aa:18:a2:df:55:ed:48:a1:d9:bf:b3:bf:48:7b:22:5a:90:b6
@@ -24,9 +24,9 @@ progress =
 mq =
 purge =
 shelve =
-#hgcanttype =                               #TODO: Consider installing this
+#hgcanttype =     #TODO: Consider installing this
 largefiles =
-#crecord=~/Hacking/crecord/crecord          #TODO: Install crecord
+crecord = /Users/indika/dev/tools/crecord/crecord
 histedit =
 
 [pager]

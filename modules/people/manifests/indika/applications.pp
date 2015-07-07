@@ -30,9 +30,10 @@ class people::indika::applications {
   # include people::felho::applications::battery_time
   # include people::felho::applications::bettertouchtool
   # include people::felho::applications::clipgrab
-  include people::indika::applications::spotifree
-  include people::indika::applications::rubymine
+  include people::indika::applications::limechat
   include people::indika::applications::pycharm
+  include people::indika::applications::rubymine
+  include people::indika::applications::spotifree
 
   # Handbrake is not mounting correctly
   # include handbrake

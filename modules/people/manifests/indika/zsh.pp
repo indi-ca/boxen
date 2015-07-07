@@ -3,7 +3,7 @@ class people::indika::zsh {
   package { 'zsh': }
 
   repository { 'oh-my-zsh':
-    source   => 'git://github.com/indika/oh-my-zsh.git',
+    source   => 'https://github.com/indika/oh-my-zsh.git',
     path     => '/Users/indika/.oh-my-zsh',
     provider => 'git',
   }
