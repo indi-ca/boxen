@@ -1,16 +1,5 @@
 class projects::netbox::mercurial {
 
-  file { '/Users/indika/.hgrc':
-    ensure => present,
-    mode => 644,
-    source => 'puppet:///modules/projects/dot-hgrc.txt',
-    recurse => false,
-    owner => 'indika',
-    group => 'staff',
-  }
-
-# https://bitbucket.org/edgimar/crecord
-
   file { 'dir_dev-tools':
     ensure   => directory,
     path     => '/Users/indika/dev/tools/',
@@ -27,5 +16,22 @@ class projects::netbox::mercurial {
     group    => 'staff',
   }
 
+  file { '/Users/indika/.hgignore':
+    ensure   => link,
+    target   => '/Users/indika/dev/config/mercurial/.hgignore',
+    owner    => $user,
+    group    => 'staff',
+    mode     => 644,
+    require => Vcsrepo['/Users/indika/dev/config']
+  }
+
+  file { '/Users/indika/.hgrc':
+    ensure   => link,
+    target   => '/Users/indika/dev/config/mercurial/.hgrc',
+    owner    => $user,
+    group    => 'staff',
+    mode     => 644,
+    require => Vcsrepo['/Users/indika/dev/config']
+  }
 
 }
