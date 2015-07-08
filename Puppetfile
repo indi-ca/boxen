@@ -76,7 +76,6 @@ github "xquartz",     "1.2.1"
 github "python",          "3.0.0", :repo => "mloberg/puppet-python"
 
 
-github "chicken_of_the_vnc",    "1.0.0"
 github "iterm2",                "1.2.4"
 github "chrome",                "1.2.0"
 github "teamviewer",            "1.0.1"

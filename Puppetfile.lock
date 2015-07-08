@@ -16,11 +16,6 @@ GITHUBTARBALL
     brewcask (0.0.6)
 
 GITHUBTARBALL
-  remote: boxen/puppet-chicken_of_the_vnc
-  specs:
-    chicken_of_the_vnc (1.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-chrome
   specs:
     chrome (1.2.0)
@@ -173,7 +168,6 @@ GITHUBTARBALL
 DEPENDENCIES
   boxen (= 3.10.4)
   brewcask (= 0.0.6)
-  chicken_of_the_vnc (= 1.0.0)
   chrome (= 1.2.0)
   dnsmasq (= 2.0.1)
   firefox (= 1.2.3)

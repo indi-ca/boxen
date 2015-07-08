@@ -1,6 +1,5 @@
 class people::indika::applications {
 
-  include sublime_text
 
   include iterm2::dev
   include iterm2::colors::arthur
@@ -9,7 +8,6 @@ class people::indika::applications {
   include iterm2::colors::solarized_dark
   include iterm2::colors::zenburn
 
-  # include chicken_of_the_vnc
   include chrome
   include skype
   # include teamviewer
@@ -20,6 +18,7 @@ class people::indika::applications {
   include firefox
   include vlc
   include spotify
+  include sublime_text
   include teamviewer
   include virtualbox
   include xquartz
@@ -30,6 +29,7 @@ class people::indika::applications {
   # include people::felho::applications::battery_time
   # include people::felho::applications::bettertouchtool
   # include people::felho::applications::clipgrab
+  include people::indika::applications::chicken_of_the_vnc
   include people::indika::applications::limechat
   include people::indika::applications::pycharm
   include people::indika::applications::rubymine
