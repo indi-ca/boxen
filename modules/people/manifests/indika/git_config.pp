@@ -4,7 +4,7 @@ class people::indika::git_config {
   }
 
   git::config::global { 'user.name':
-    value  => 'indika'
+    value  => 'Indika Piyasena'
   }
 
   git::config::global { 'color.ui':

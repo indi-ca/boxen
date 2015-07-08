@@ -84,10 +84,15 @@ github "teamviewer",            "1.0.1"
 # github "transmission",        "1.1.0"
 # github "java",                "1.1.2"
 github "firefox",               "1.2.3"
+github "seil",                  "1.0.3"
 github "sublime_text",          "1.1.0"
 github "spotify",               "1.0.2"
 github "skype",                 "1.1.0"
+
+# Using the standard OSX, not Felho's one
+github "osx",                   "2.8.0"
 # github "osx",                 "1.4.0", :repo => "felho/puppet-osx"
+
 github "vlc",                   "1.1.0"
 # github "adobe_reader",        "1.0.1"
 # github "alfred",              "1.1.1"

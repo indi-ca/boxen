@@ -80,6 +80,14 @@ class people::indika::application_settings::finder {
     value  => true,
   }
 
+  boxen::osx_defaults { 'Hide icons on desktop':
+    user   => $::luser,
+    domain => 'com.apple.finder',
+    key    => 'CreateDesktop',
+    type   => 'bool',
+    value  => false,
+  }
+
   boxen::osx_defaults { 'When performing a search, search the current folder by default':
     user   => $::luser,
     domain => 'com.apple.finder',
