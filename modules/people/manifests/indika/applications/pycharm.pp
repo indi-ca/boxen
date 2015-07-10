@@ -1,7 +1,7 @@
 class people::indika::applications::pycharm (
-  $version = '4.5',
+  $version = '4.5.3',
 ) {
-  
+
 
   # package { 'PyCharm':
   #   provider => 'appdmg',
