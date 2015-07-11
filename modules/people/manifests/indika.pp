@@ -58,12 +58,6 @@ class people::indika {
     }
 
 
-    repository { 'puppet-virtualenv':
-      source   => 'git://github.com/indika/puppet-virtualenv.git',
-      path     => '/Users/indika/dev/boxen-learn/puppet-virtualenv',
-      provider => 'git',
-      require  => File['dir_boxen-learn']
-    }
 
     # Sublime
     # repository {
