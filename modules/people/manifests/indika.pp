@@ -21,6 +21,8 @@ class people::indika {
     include people::indika::application_settings
     include people::indika::homebrew_packages
     include people::indika::zsh
+
+    include people::indika::functional
     include projects::netbox
 
     #include projects::truecrypt
@@ -48,33 +50,6 @@ class people::indika {
       group    => 'staff',
     }
 
-
-    vcsrepo { "/Users/indika/dev/functional":
-      ensure   => present,
-      provider => git,
-      source   => "https://github.com/indika/functional.git",
-      owner    => 'indika',
-      group    => 'staff',
-    }
-
-
-
-    # Sublime
-    # repository {
-    #  'sublime-user':
-    #    source   => 'https://github.com/indika/User.git',
-    #    path     => '/Users/indika/Library/Application Support/Sublime Text 3/Packages/User',
-    #    provider => 'git',
-    # }
-
-
-    # Sublime Push Bullet
-    repository {
-     'sublime-push-bullet':
-       source   => 'https://github.com/indika/sublime-push-bullet.git',
-       path     => '/Users/indika/Library/Application Support/Sublime Text 3/Packages/SublimePushBullet',
-       provider => 'git',
-    }
 }
 
 

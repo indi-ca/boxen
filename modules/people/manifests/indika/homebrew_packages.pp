@@ -1,5 +1,5 @@
 #
-# These packages will also be installed via Homebrew
+# These packages will be installed via Homebrew
 #
 
 class people::indika::homebrew_packages {
@@ -16,6 +16,7 @@ class people::indika::homebrew_packages {
         'pass',
         'pstree',
         'rdesktop',
+        'terminal-notifier',
         'tree',
         'watch',
         'wget',
