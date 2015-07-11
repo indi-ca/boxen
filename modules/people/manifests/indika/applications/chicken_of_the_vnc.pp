@@ -12,7 +12,7 @@ class people::indika::applications::chicken_of_the_vnc {
     owner    => $user,
     group    => 'staff',
     mode     => 600,
-    require  => Package['Chicken_of_the_vnc']
+    require  => [ Package['Chicken_of_the_vnc'], Vcsrepo['/Users/indika/dev/config'] ]
   }
 
 }

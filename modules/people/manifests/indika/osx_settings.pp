@@ -1,4 +1,5 @@
 class people::indika::osx_settings {
+
   # include people::indika::osx_settings::trackpad
   # include people::indika::osx_settings::keyboard
   # include people::indika::osx_settings::zooming
@@ -11,4 +12,5 @@ class people::indika::osx_settings {
   # include people::indika::osx_settings::miscellaneous
   # include people::indika::osx_settings::computer_name
   # include people::indika::osx_settings::disable_boot_chime
+
 }
