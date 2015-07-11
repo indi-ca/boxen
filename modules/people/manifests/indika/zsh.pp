@@ -6,7 +6,7 @@ class people::indika::zsh {
   #Or perhaps a basic infrastructure class
   repository { 'oh-my-zsh':
     source   => 'https://github.com/indika/oh-my-zsh.git',
-    path     => '/Users/indika/dev/.oh-my-zsh',
+    path     => '/Users/indika/dev/oh-my-zsh',
     provider => 'git',
   }
 
