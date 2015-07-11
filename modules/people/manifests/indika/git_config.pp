@@ -23,9 +23,23 @@ class people::indika::git_config {
     value  => 'true'
   }
 
+  git::config::global { 'core.attributesfile':
+    value  => '~/.gitattributes'
+  }
+
+  file { '/Users/indika/.gitattributes':
+    ensure   => link,
+    target   => '/Users/indika/dev/config/git/dot_gitattributes',
+    owner    => $user,
+    group    => 'staff',
+    mode     => 600,
+    require  => Vcsrepo['/Users/indika/dev/config']
+  }
+
   git::config::global { 'alias.hist':
     value  => 'log --pretty=format:\'%h %ad | %s%d [%an]\' --graph --date=short'
   }
+
 
   # git::config::global { 'alias.type':
   #   value  => 'cat-file -t'

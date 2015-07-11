@@ -1,5 +1,8 @@
 class people::indika::osx_settings {
 
+  # Good reading
+  # https://gist.github.com/MatthewMueller/e22d9840f9ea2fee4716
+
   # include people::indika::osx_settings::trackpad
   # include people::indika::osx_settings::keyboard
   # include people::indika::osx_settings::zooming

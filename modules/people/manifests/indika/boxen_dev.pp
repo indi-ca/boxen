@@ -44,4 +44,15 @@ class people::indika::boxen_dev {
       require  => File['dir_osx-boxen']
     }
 
+    # This might teach me how to backup my configuration
+    vcsrepo { "${boxen_dev_dir}/mackup":
+      ensure   => present,
+      provider => git,
+      source   => "https://github.com/lra/mackup",
+      depth    => 1,
+      owner    => 'indika',
+      group    => 'staff',
+      require  => File['dir_osx-boxen']
+    }
+
 }
