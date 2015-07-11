@@ -18,7 +18,12 @@ class people::indika::applications {
   include firefox
   include vlc
   include spotify
-  include sublime_text
+
+  # include sublime_text
+  # class { 'sublime_text':
+  #   build => '3083'
+  # }
+
   include teamviewer
   include virtualbox
   include xquartz
