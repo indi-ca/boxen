@@ -30,9 +30,8 @@ class people::indika::git_config {
   file { '/Users/indika/.gitattributes':
     ensure   => link,
     target   => '/Users/indika/dev/config/git/dot_gitattributes',
-    owner    => $user,
+    owner    => 'indika',
     group    => 'staff',
-    mode     => 600,
     require  => Vcsrepo['/Users/indika/dev/config']
   }
 
