@@ -20,6 +20,7 @@ class people::indika {
     include people::indika::applications
     include people::indika::application_settings
     include people::indika::homebrew_packages
+    include people::indika::nix
     include people::indika::zsh
 
     include people::indika::functional

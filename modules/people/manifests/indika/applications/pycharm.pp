@@ -3,6 +3,8 @@ class people::indika::applications::pycharm (
 ) {
 
 
+  $pycharm_home = "/Users/${::boxen_user}/Library/Preferences/PyCharm40"
+
   # package { 'PyCharm':
   #   provider => 'appdmg',
   #   source   => "http://download.jetbrains.com/python/pycharm-professional-${version}.dmg",
@@ -10,7 +12,7 @@ class people::indika::applications::pycharm (
   #   group    => 'admin',
   # }
 
-  vcsrepo { "/Users/indika/Library/Preferences/PyCharm40/keymaps":
+  vcsrepo { "${pycharm_home}/keymaps":
     ensure   => latest,
     provider => git,
     source   => 'https://github.com/indika/PyCharm40-keymaps',
@@ -18,6 +20,20 @@ class people::indika::applications::pycharm (
     owner    => 'indika',
     group    => 'staff',
   }
+
+  file { "${pycharm_home}/options":
+     ensure   => link,
+     target   => '/Users/indika/dev/config/pycharm/options',
+     owner    => 'indika',
+     group    => 'staff',
+     force    => 'true',
+     mode     => 700,
+
+  #   # TODO: Need to make it dependant on config as well
+  #   # require => Package['Pycharm'],
+   }
+
+
 
 }
 

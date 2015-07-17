@@ -18,6 +18,7 @@ class people::indika::homebrew_packages {
         'rdesktop',
         'terminal-notifier',
         'tree',
+        'youtube-dl',
         'watch',
         'wget',
       ]:
