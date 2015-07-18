@@ -35,7 +35,7 @@ class people::indika::applications {
   # include people::felho::applications::bettertouchtool
   # include people::felho::applications::clipgrab
   include people::indika::applications::chicken_of_the_vnc
-  include people::indika::applications::fuse
+  #include people::indika::applications::fuse
   include people::indika::applications::geektool
   include people::indika::applications::limechat
   include people::indika::applications::pandora
