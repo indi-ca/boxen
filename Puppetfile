@@ -78,7 +78,7 @@ github "python",          "3.0.0", :repo => "mloberg/puppet-python"
 
 github "iterm2",                "1.2.4"
 github "chrome",                "1.2.0"
-github "teamviewer",            "1.0.1"
+# github "teamviewer",            "1.0.1"
 # github "dropbox",             "1.1.1"
 # github "clipmenu",            "1.0.0"
 # github "transmission",        "1.1.0"

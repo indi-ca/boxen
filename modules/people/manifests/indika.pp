@@ -10,6 +10,17 @@ class people::indika {
     notice("User is ${user}")
 
 
+    # This is a bootstrap repo
+
+    vcsrepo { "/Users/indika/dev/config":
+      ensure   => present,
+      provider => git,
+      source   => "https://github.com/indika/config.git",
+      owner    => 'indika',
+      group    => 'staff',
+    }
+
+
     include people::indika::networking
     include people::indika::git_config
     include people::indika::frictionless
@@ -24,7 +35,8 @@ class people::indika {
     include people::indika::zsh
 
     include people::indika::functional
-    include projects::netbox
+    
+    # include projects::netbox
 
     #include projects::truecrypt
 
@@ -40,16 +52,7 @@ class people::indika {
     # }
 
 
-    # This is a bootstrap repo
 
-
-    vcsrepo { "/Users/indika/dev/config":
-      ensure   => present,
-      provider => git,
-      source   => "https://github.com/indika/config.git",
-      owner    => 'indika',
-      group    => 'staff',
-    }
 
 }
 

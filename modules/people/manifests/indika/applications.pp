@@ -10,7 +10,6 @@ class people::indika::applications {
 
   include chrome
   include skype
-  # include teamviewer
   # include dropbox
   # include clipmenu
   # include transmission
@@ -24,7 +23,7 @@ class people::indika::applications {
   #   build => '3083'
   # }
 
-  include teamviewer
+  # include teamviewer
   include virtualbox
   include xquartz
   # include adobe_reader
