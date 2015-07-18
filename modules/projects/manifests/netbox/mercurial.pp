@@ -1,12 +1,7 @@
 class projects::netbox::mercurial {
 
-  file { 'dir_dev-tools':
-    ensure   => directory,
-    path     => '/Users/indika/dev/tools/',
-    owner    => 'indika',
-    group    => 'staff',
-    mode     => 755,
-  }
+
+  package { 'mercurial': }
 
   vcsrepo { "/Users/indika/dev/tools/crecord":
     ensure   => latest,

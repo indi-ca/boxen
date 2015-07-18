@@ -35,23 +35,10 @@ class people::indika {
     include people::indika::zsh
 
     include people::indika::functional
-    
-    # include projects::netbox
+
+    include projects::netbox
 
     #include projects::truecrypt
-
-    #
-    # Remove services we don't want
-    #
-    # service {"dev.nginx":
-    #     ensure => "stopped",
-    # }
-
-    # service {"dev.dnsmasq":
-    #     ensure => "stopped",
-    # }
-
-
 
 
 }

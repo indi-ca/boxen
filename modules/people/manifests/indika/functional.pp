@@ -1,7 +1,7 @@
 class people::indika::functional {
 
-  # include brewcask
-  # package { 'haskell-platform': provider => 'brewcask' }
+  include brewcask
+  package { 'haskell-platform': provider => 'brewcask' }
 
   vcsrepo { "/Users/indika/dev/functional":
     ensure   => present,
@@ -11,13 +11,13 @@ class people::indika::functional {
     group    => 'staff',
   }
 
-  # file { 'sublimehaskell_sandbox':
-  #   ensure   => directory,
-  #   path     => '/Users/indika/dev/tools/sublimehaskell_sandbox',
-  #   owner    => 'indika',
-  #   group    => 'staff',
-  #   mode     => 755,#
-  # }
+  file { 'sublimehaskell_sandbox':
+    ensure   => directory,
+    path     => '/Users/indika/dev/tools/sublimehaskell_sandbox',
+    owner    => 'indika',
+    group    => 'staff',
+    mode     => 755,#
+  }
 
   # require sublime_text::config
 

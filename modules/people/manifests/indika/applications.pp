@@ -23,11 +23,9 @@ class people::indika::applications {
   #   build => '3083'
   # }
 
-  # include teamviewer
   include virtualbox
   include xquartz
   # include adobe_reader
-  # include people::felho::applications::myphonedesktop
   # include alfred
   # include viscosity
   # include people::felho::applications::battery_time
@@ -55,9 +53,4 @@ class people::indika::applications {
   # Functional dev
   include people::indika::applications::agda
 
-  #TODO: Not defining this in site.pp annoys me so much
-  # include nodejs::v0_10
-  # class { 'nodejs::global':
-  #   version => 'v0.10'
-  # }
 }

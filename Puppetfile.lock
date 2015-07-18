@@ -131,11 +131,6 @@ GITHUBTARBALL
     sudo (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-teamviewer
-  specs:
-    teamviewer (1.0.1)
-
-GITHUBTARBALL
   remote: boxen/puppet-vagrant
   specs:
     vagrant (3.3.0)
@@ -206,7 +201,6 @@ DEPENDENCIES
   stdlib (= 4.2.1)
   sublime_text (= 1.1.0)
   sudo (= 1.0.0)
-  teamviewer (= 1.0.1)
   vagrant (= 3.3.0)
   virtualbox (= 1.0.13)
   vlc (= 1.1.0)
