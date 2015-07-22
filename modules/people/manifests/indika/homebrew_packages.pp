@@ -12,6 +12,7 @@ class people::indika::homebrew_packages {
         'fdupes',           # File duplicates
         'gradle',
         'hub',
+        'mobile-shell',
         'mtr',
         'pass',
         'pstree',

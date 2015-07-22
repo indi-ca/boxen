@@ -12,7 +12,7 @@ class people::indika::applications {
   include skype
   # include dropbox
   # include clipmenu
-  # include transmission
+  include transmission
   # include java
   include firefox
   include vlc

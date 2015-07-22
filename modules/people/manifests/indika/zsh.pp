@@ -11,7 +11,7 @@ class people::indika::zsh {
   }
 
   vcsrepo { "/Users/indika/.zprezto":
-    ensure     => latest,
+    ensure     => present,
     provider   => git,
     source     => 'https://github.com/indika/prezto',
     owner      => 'indika',
