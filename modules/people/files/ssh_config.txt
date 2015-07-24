@@ -29,6 +29,13 @@ Host winsvr
     User Administrator
     IdentityFile ~/.ssh/id_rsa_vm
 
+Host build7
+    Hostname build7.nb
+    Port 22
+    User ipiyasena
+    IdentityFile ~/.ssh/id_rsa_vm
+    ForwardAgent yes
+
 Host shan
     Hostname 192.168.0.65
     Port 22

@@ -11,6 +11,7 @@ class people::indika::homebrew_packages {
         'ag',               # The silver searcher
         'fdupes',           # File duplicates
         'gradle',
+        'fasd',             # On probation
         'hub',
         'mobile-shell',
         'mtr',

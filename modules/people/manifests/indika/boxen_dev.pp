@@ -55,4 +55,14 @@ class people::indika::boxen_dev {
       require  => File['dir_osx-boxen']
     }
 
+    # My kitchen
+    vcsrepo { "${boxen_dev_dir}/kitchen":
+      ensure   => present,
+      provider => git,
+      source   => "https://github.com/indika/kitchen",
+      owner    => 'indika',
+      group    => 'staff',
+      require  => File['dir_osx-boxen']
+    }
+
 }
