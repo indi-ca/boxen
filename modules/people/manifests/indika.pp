@@ -36,6 +36,8 @@ class people::indika {
 
     include people::indika::functional
 
+    # Projects
+    include projects::blog
     include projects::netbox
 
     #include projects::truecrypt
