@@ -1,6 +1,8 @@
 class people::indika::boxen_dev {
 
     $boxen_dev_dir = "/Users/${::boxen_user}/dev/osx-boxen"
+    $puppet_modules_dir = "${boxen_dev_dir}/puppet-modules"
+
 
     # Root directory
     file { 'dir_osx-boxen':
@@ -9,6 +11,16 @@ class people::indika::boxen_dev {
       owner    => 'indika',
       group    => 'staff',
       mode     => 755, #TODO: Find out what this should be,
+    }
+
+    # Puppet module directory
+    file { 'dir_puppet-modules':
+      ensure   => directory,
+      path     => $puppet_modules_dir,
+      owner    => 'indika',
+      group    => 'staff',
+      mode     => 755,
+      require  => File['dir_osx-boxen']
     }
 
     # Github's Boxen
@@ -34,14 +46,36 @@ class people::indika::boxen_dev {
     }
 
     # This is a module that I'm developing. It's kindof empty
-    vcsrepo { "${boxen_dev_dir}/puppet-virtualenv":
+    vcsrepo { "${puppet_modules_dir}/puppet-virtualenv":
       ensure   => present,
       provider => git,
       source   => "https://github.com/indika/puppet-virtualenv.git",
       depth    => 1,
       owner    => 'indika',
       group    => 'staff',
-      require  => File['dir_osx-boxen']
+      require  => File['dir_puppet-modules']
+    }
+
+    #TODO: Perhaps I should make these latest
+    vcsrepo { "${puppet_modules_dir}/puppet-systemd":
+      ensure   => latest,
+      provider => git,
+      source   => "https://github.com/camptocamp/puppet-systemd",
+      depth    => 1,
+      owner    => 'indika',
+      group    => 'staff',
+      require  => File['dir_puppet-modules']
+    }
+
+    #TODO: Perhaps I should make these latest
+    vcsrepo { "${puppet_modules_dir}/puppetlabs-firewall":
+      ensure   => latest,
+      provider => git,
+      source   => "https://github.com/puppetlabs/puppetlabs-firewall",
+      depth    => 1,
+      owner    => 'indika',
+      group    => 'staff',
+      require  => File['dir_puppet-modules']
     }
 
     # This might teach me how to backup my configuration

@@ -32,6 +32,7 @@ class people::indika::applications {
   # include people::felho::applications::bettertouchtool
   # include people::felho::applications::clipgrab
   include people::indika::applications::chicken_of_the_vnc
+  include people::indika::applications::clamav
   #include people::indika::applications::fuse
   include people::indika::applications::geektool
   include people::indika::applications::limechat
@@ -47,6 +48,9 @@ class people::indika::applications {
   # TODO: Can't get this to work
   # include brewcask
   # package { 'handbrakecli': provider => 'brewcask' }
+
+  include brewcask
+  package { 'adium': provider => 'brewcask' }
 
   # include vagrant
 

@@ -17,6 +17,19 @@ class people::indika::application_settings::iterm2 {
   }
 
 
+  vcsrepo { "/Users/indika/Reconstruction/iTerm2-Color-Schemes":
+    ensure   => latest,
+    depth    => 1,
+    provider => git,
+    source   => 'https://github.com/mbadolato/iTerm2-Color-Schemes',
+    owner    => 'indika',
+    group    => 'staff',
+  }
+
+# https://github.com/mbadolato/iTerm2-Color-Schemes
+
+
+
 # Fetch colors
 # https://github.com/mbadolato/iTerm2-Color-Schemes/tarball/master
 

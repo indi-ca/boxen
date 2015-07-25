@@ -1,8 +1,8 @@
 class people::indika::applications::truecrypt (
 
-  $source = 'https://dl.dropboxusercontent.com/u/8261661/resjBlDEvhYB3liuvOX/TrueCrypt-7.2-Mac-OS-X.dmg',
+  $source = 'https://dl.dropboxusercontent.com/u/8261661/resjBlDEvhYB3liuvOX/VeraCrypt_1.0f-2.dmg',
 ) {
-  package { 'TrueCrypt':
+  package { 'VeraCrypt':
     source   => $source,
     provider => 'pkgdmg',
     require  => Package['osxfuse'],
