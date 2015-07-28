@@ -56,7 +56,6 @@ class people::indika::boxen_dev {
       require  => File['dir_puppet-modules']
     }
 
-    #TODO: Perhaps I should make these latest
     vcsrepo { "${puppet_modules_dir}/puppet-systemd":
       ensure   => latest,
       provider => git,
@@ -67,11 +66,20 @@ class people::indika::boxen_dev {
       require  => File['dir_puppet-modules']
     }
 
-    #TODO: Perhaps I should make these latest
     vcsrepo { "${puppet_modules_dir}/puppetlabs-firewall":
       ensure   => latest,
       provider => git,
       source   => "https://github.com/puppetlabs/puppetlabs-firewall",
+      depth    => 1,
+      owner    => 'indika',
+      group    => 'staff',
+      require  => File['dir_puppet-modules']
+    }
+
+    vcsrepo { "${puppet_modules_dir}/puppetlabs-openvpn":
+      ensure   => latest,
+      provider => git,
+      source   => "https://github.com/annejan/puppet-openvpn",
       depth    => 1,
       owner    => 'indika',
       group    => 'staff',

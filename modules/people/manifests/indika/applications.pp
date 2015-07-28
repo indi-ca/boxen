@@ -24,10 +24,13 @@ class people::indika::applications {
   # }
 
   include virtualbox
+  include vlc
   include xquartz
   # include adobe_reader
   # include alfred
   # include viscosity
+
+
   # include people::felho::applications::battery_time
   # include people::felho::applications::bettertouchtool
   # include people::felho::applications::clipgrab
@@ -41,6 +44,9 @@ class people::indika::applications {
   include people::indika::applications::rubymine
   # include people::indika::applications::rust
   include people::indika::applications::spotifree
+
+  #TODO: Perhaps this should be a project
+  include people::indika::applications::squid
 
   # Handbrake is not mounting correctly
   # include handbrake

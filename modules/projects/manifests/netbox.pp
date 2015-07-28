@@ -66,6 +66,6 @@ class projects::netbox {
   # }
 
   # Python Dependencies
-  # click enum34 mercurial mercurial-keyring pydns simplejson Fabric Twisted==13.0.0
+  # click enum34 mercurial mercurial-keyring pydns simplejson Fabric Twisted==13.0.0 httplib2
 
 }

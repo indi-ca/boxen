@@ -41,6 +41,10 @@ class people::indika::application_settings::sublime_text {
 #    source => 'buymeasoda/soda-theme'
 #  }
 
+#  sublime_text::package { 'Predawn':
+#    source => '?ai'
+#  }
+
   $sublime_home = "/Users/${::boxen_user}/Library/Application Support/Sublime Text 3"
 
   file { "${sublime_home}/Packages/User":

@@ -11,14 +11,6 @@ class people::indika::functional {
     group    => 'staff',
   }
 
-  file { 'sublimehaskell_sandbox':
-    ensure   => directory,
-    path     => '/Users/indika/dev/tools/sublimehaskell_sandbox',
-    owner    => 'indika',
-    group    => 'staff',
-    mode     => 755,#
-  }
-
   # require sublime_text::config
 
   # This might work, but I know for sure that adding this to sublime:
