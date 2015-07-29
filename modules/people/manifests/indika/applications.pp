@@ -28,7 +28,6 @@ class people::indika::applications {
   include xquartz
   # include adobe_reader
   # include alfred
-  # include viscosity
 
 
   # include people::felho::applications::battery_time
