@@ -25,6 +25,7 @@ class people::indika {
     include people::indika::git_config
     include people::indika::frictionless
     include people::indika::osx_settings
+    include people::indika::core_utils
     include people::indika::fonts
 
     include people::indika::boxen_dev
