@@ -38,11 +38,11 @@ class people::indika {
     include people::indika::functional
 
     # Projects
+    include people::indika::projects::graph
     include projects::blog
     include projects::netbox
 
     #include projects::truecrypt
-
 
 }
 

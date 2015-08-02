@@ -12,6 +12,7 @@ class people::indika::homebrew_packages {
         'fdupes',           # File duplicates
         'gradle',
         'fasd',             # On probation
+        'fswatch',          # FileSystem watch
         'hub',
         'mobile-shell',
         'mtr',
