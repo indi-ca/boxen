@@ -80,8 +80,6 @@ node default {
   package {
     [
       'ack',
-      'findutils',
-      'gnu-tar'
     ]:
   }
 

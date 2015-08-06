@@ -1,6 +1,8 @@
 #!/bin/bash
 
 
+mkdir ~/.nixpkgs
+
 mkdir ~/dev
 mkdir ~/dev/opensource
 mkdir ~/dev/osx-boxen
