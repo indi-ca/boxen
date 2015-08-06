@@ -60,6 +60,6 @@ class people::indika::applications {
   # include vagrant
 
   # Functional dev
-  include people::indika::applications::agda
+  include people::indika::applications::emacs
 
 }

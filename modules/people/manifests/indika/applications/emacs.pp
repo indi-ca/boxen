@@ -1,18 +1,27 @@
-class people::indika::applications::agda {
-
-#TODO: Rename this
+class people::indika::applications::emacs {
 
   package { 'Aquamacs':
     provider => 'appdmg',
     source   => 'https://dl.dropboxusercontent.com/u/8261661/resjBlDEvhYB3liuvOX/Aquamacs-Emacs-3.2.dmg',
   }
 
-  file { '/Users/indika/Library/Preferences/Aquamacs Emacs/osxkeys.el':
+
+  file { '/Users/indika/.emacs.d/init.el':
     ensure   => link,
-    target   => '/Users/indika/dev/config/emacs/osxkeys.el',
+    target   => '/Users/indika/dev/config/emacs/init.el',
     owner    => $user,
     group    => 'staff',
     mode     => 644
+  }
+
+  vcsrepo { "/Users/indika/.emacs.d/ergoemacs-mode":
+    ensure   => latest,
+    provider => git,
+    depth    => 1,
+    source   => 'https://github.com/ergoemacs/ergoemacs-mode.git',
+    revision => 'master',
+    owner    => 'indika',
+    group    => 'staff',
   }
 
 
