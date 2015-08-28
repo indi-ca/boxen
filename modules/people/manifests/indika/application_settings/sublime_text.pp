@@ -59,6 +59,15 @@ class people::indika::application_settings::sublime_text {
   #   # require => Package['Sublime_text'],
    }
 
+  # Enabling key repeat for Sublime Vintage
+  boxen::osx_defaults { 'Enabling key repeat for Sublime VINTAGE':
+    user   => $::luser,
+    domain => 'com.sublimetext.3',
+    key    => 'ApplePressAndHoldEnabled',
+    type   => 'bool',
+    value  => false,
+  }
+
   # # Sublime Push Bullet
   # repository { 'sublime-push-bullet':
   #    source   => 'https://github.com/indika/sublime-push-bullet.git',
