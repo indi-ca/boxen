@@ -11,6 +11,30 @@ Host build.nb
     User ipiyasena
     ForwardAgent yes
 
+Host m
+    Hostname 10.3.20.104
+    Port 4
+    User root
+    IdentityFile ~/.ssh/id_rsa_vm
+
+Host motor
+    Hostname 10.3.20.104
+    Port 4
+    User root
+    IdentityFile ~/.ssh/id_rsa_vm
+
+Host l
+    Hostname 10.107.10.254
+    Port 4
+    User root
+    IdentityFile ~/.ssh/id_rsa_vm
+
+Host lego
+    Hostname 10.107.10.254
+    Port 4
+    User root
+    IdentityFile ~/.ssh/id_rsa_vm
+
 Host srm
     Hostname 10.107.11.246
     Port 22
