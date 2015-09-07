@@ -60,6 +60,12 @@ Host build7
     IdentityFile ~/.ssh/id_rsa_vm
     ForwardAgent yes
 
+Host wings
+   Hostname 192.168.0.54
+   Port 22
+   User indika
+   IdentityFile ~/.ssh/id_rsa_cobalt_wings
+
 Host shan
     Hostname 192.168.0.65
     Port 22

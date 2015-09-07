@@ -5,6 +5,9 @@ class projects::netbox {
     package { 'python': }
     include projects::netbox::mercurial
 
+    include postgresql
+    postgresql::db { 'mailarchive': }
+
   #   # They end up here
   #   #/opt/boxen/pyenv/versions
 
@@ -23,14 +26,19 @@ class projects::netbox {
   #       python  => $version2,
   #   }
 
-  #   $version3 = '3.4.1'
-  #   python::version { $version3: }
+    $version3 = '3.4.1'
+    python::version { $version3: }
 
-  #   # Install the latest version of virtualenv
-  #   python::package { "virtualenv for ${version3}":
-  #       package => 'virtualenv',
-  #       python  => $version3,
-  #   }
+    # Install the latest version of virtualenv
+    python::package { "virtualenv for ${version3}":
+        package => 'virtualenv',
+        python  => $version3,
+    }
+
+    # ensure a certain python version is used in a dir
+    python::local { '/Users/indika/dev/box/mailarchive':
+      version => '3.4.1'
+    }
 
   #   # Installing a pyenv plugin
   #   python::plugin { 'pyenv-virtualenvwrapper':

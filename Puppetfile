@@ -84,10 +84,12 @@ github "chrome",                "1.2.0"
 github "transmission",        "1.1.0"
 # github "java",                "1.1.2"
 github "firefox",               "1.2.3"
+github "postgresql",            "4.0.1"
 github "seil",                  "1.0.3"
 github "sublime_text",          "1.1.0"
 github "spotify",               "1.0.2"
 github "skype",                 "1.1.0"
+github "sysctl",                "1.0.1"
 
 # Using the standard OSX, not Felho's one
 github "osx",                   "2.8.0"
