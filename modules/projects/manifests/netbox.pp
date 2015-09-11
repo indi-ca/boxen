@@ -11,20 +11,63 @@ class projects::netbox {
   #   # They end up here
   #   #/opt/boxen/pyenv/versions
 
-  #   # I'd rather have Homebrew's version of pyenv
-  #   package { 'pyenv': ensure => "latest" }
-  #   package { 'pyenv-virtualenv': ensure => "latest" }
+    # I'd rather have Homebrew's version of pyenv
+    # Not sure, perhaps I shouldn't have the Homebrew's version of it
+    # package { 'pyenv': ensure => "latest" }
+    # package { 'pyenv-virtualenv': ensure => "latest" }
 
   #   #TODO: Upgrade to 2.7.9
   #   # Watch it: https://github.com/mloberg/puppet-python/tags.atom
-  #   $version2 = '2.7.8'
-  #   python::version { $version2: }
+    $version2 = '2.7.8'
+    python::version { $version2: }
 
-  #   # Install the latest version of virtualenv
-  #   python::package { "virtualenv for ${version2}":
-  #       package => 'virtualenv',
-  #       python  => $version2,
-  #   }
+    # Install the latest version of virtualenv
+    python::package { "virtualenv for ${version2}":
+        package => 'virtualenv',
+        python  => $version2,
+    }
+
+  # Python Dependencies
+  # click enum34 mercurial mercurial-keyring pydns simplejson Fabric Twisted==13.0.0 httplib2
+
+    python::package { "click for ${version2}":
+      package => 'click',
+      python  => '2.7.8',
+    }
+    python::package { "enum34 for ${version2}":
+      package => 'enum34',
+      python  => '2.7.8',
+    }
+    python::package { "pydns for ${version2}":
+      package => 'pydns',
+      python  => '2.7.8',
+    }
+    python::package { "simplejson for ${version2}":
+      package => 'simplejson',
+      python  => '2.7.8',
+    }
+    python::package { "mercurial for ${version2}":
+      package => 'mercurial',
+      python  => '2.7.8',
+    }
+    python::package { "mercurial-keyring for ${version2}":
+      package => 'mercurial-keyring',
+      python  => '2.7.8',
+    }
+    python::package { "httplib2 for ${version2}":
+      package => 'httplib2',
+      python  => '2.7.8',
+    }
+    python::package { "Fabric for ${version2}":
+      package => 'Fabric',
+      python  => '2.7.8',
+    }
+    python::package { "Twisted for ${version2}":
+      package => 'Twisted',
+      python  => '2.7.8',
+      version => '>=13.0.0,<14.0.0',
+    }
+
 
     $version3 = '3.4.1'
     python::version { $version3: }
@@ -38,6 +81,11 @@ class projects::netbox {
     # ensure a certain python version is used in a dir
     python::local { '/Users/indika/dev/box/mailarchive':
       version => '3.4.1'
+    }
+
+    python::package { "sqlalchemy for ${version3}":
+      package => 'sqlalchemy',
+      python  => '3.4.1',
     }
 
   #   # Installing a pyenv plugin
@@ -73,7 +121,5 @@ class projects::netbox {
   #   require => File['pip_conf_dir']
   # }
 
-  # Python Dependencies
-  # click enum34 mercurial mercurial-keyring pydns simplejson Fabric Twisted==13.0.0 httplib2
 
 }

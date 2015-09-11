@@ -5,6 +5,20 @@ class people::indika::applications::emacs {
     source   => 'https://dl.dropboxusercontent.com/u/8261661/resjBlDEvhYB3liuvOX/Aquamacs-Emacs-3.2.dmg',
   }
 
+  # Spacemacs configuration
+
+  file { '/Users/indika/.spacemacs':
+    ensure   => link,
+    target   => '/Users/indika/dev/config/emacs/.spacemacs',
+    owner    => $user,
+    group    => 'staff',
+    mode     => 644,
+    require => Vcsrepo['/Users/indika/dev/config']
+  }
+
+
+
+
   # The following 4 is commented out because I am using Spacemacs now
 
   # file { '/Users/indika/.emacs.d/init.el':

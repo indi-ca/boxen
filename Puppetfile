@@ -73,7 +73,7 @@ github "xquartz",     "1.2.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
-github "python",          "3.0.0", :repo => "mloberg/puppet-python"
+github "python",                "3.0.0", :repo => "mloberg/puppet-python"
 
 
 github "iterm2",                "1.2.4"
