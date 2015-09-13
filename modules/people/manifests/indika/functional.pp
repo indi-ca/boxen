@@ -2,7 +2,7 @@ class people::indika::functional {
 
   include brewcask
   package { 'haskell-platform': provider => 'brewcask' }
-  package { 'haskell-stack' }
+  package { 'haskell-stack': }
 
   vcsrepo { "/Users/indika/dev/functional":
     ensure   => present,
