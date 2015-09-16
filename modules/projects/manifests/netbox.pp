@@ -5,8 +5,11 @@ class projects::netbox {
     package { 'python': }
     include projects::netbox::mercurial
 
+    # MailArchive stuff
     include postgresql
     postgresql::db { 'mailarchive': }
+
+    package { 'awscli': }
 
   #   # They end up here
   #   #/opt/boxen/pyenv/versions
