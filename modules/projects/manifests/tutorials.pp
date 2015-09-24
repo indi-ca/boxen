@@ -9,3 +9,4 @@ class projects::tutorials {
     group    => 'staff',
   }
 
+}
