@@ -41,6 +41,31 @@ Host srm
     User root
     IdentityFile ~/.ssh/id_rsa_vm
 
+Host chive
+    Hostname 10.107.11.181
+    Port 22
+    User root
+    IdentityFile ~/.ssh/id_rsa_vm
+
+Host chive-test
+    Hostname 10.107.11.3
+    Port 22
+    User root
+    IdentityFile ~/.ssh/id_rsa_vm
+
+Host chive-live
+    Hostname 52.64.172.195
+    Port 22
+    User root
+    IdentityFile ~/.ssh/id_rsa_vm
+
+Host chive-live-centos
+    Hostname 52.64.172.195
+    Port 22
+    User centos
+    IdentityFile /Users/indika/dev/box/aws/keypairs/MailArchive.pem
+
+
 Host lyncadmin
     Hostname 10.12.101.11
     Port 22
