@@ -9,6 +9,7 @@ class people::indika::homebrew_packages {
     package {
       [
         'ag',               # The silver searcher
+        'dos2unix',
         'fdupes',           # File duplicates
         'gradle',
         'fasd',             # On probation
