@@ -1,4 +1,4 @@
-class projects::tutorials {
+class projects::course {
 
   vcsrepo { "/Users/indika/dev/tutorials/opeleye":
     ensure   => latest,
