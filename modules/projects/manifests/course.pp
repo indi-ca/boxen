@@ -18,4 +18,14 @@ class projects::course {
     group    => 'staff',
   }
 
+  vcsrepo { "/Users/indika/dev/tutorials/script-examples":
+    ensure   => latest,
+    provider => git,
+    source   => 'https://github.com/Errorific/haskell-script-examples',
+    revision => 'master',
+    owner    => 'indika',
+    group    => 'staff',
+  }
+
+
 }
