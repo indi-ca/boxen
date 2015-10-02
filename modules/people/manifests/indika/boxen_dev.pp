@@ -3,7 +3,6 @@ class people::indika::boxen_dev {
     $boxen_dev_dir = "/Users/${::boxen_user}/dev/osx-boxen"
     $puppet_modules_dir = "${boxen_dev_dir}/puppet-modules"
 
-
     # Root directory
     file { 'dir_osx-boxen':
       ensure   => directory,
@@ -105,6 +104,25 @@ class people::indika::boxen_dev {
       owner    => 'indika',
       group    => 'staff',
       require  => File['dir_osx-boxen']
+    }
+
+    # And a bit of ansible stuff
+    # Puppet module directory
+    file { 'dir_ansible-hosts':
+      ensure   => directory,
+      path     => "/etc/ansible",
+      owner    => 'root',
+      group    => 'wheel',
+      mode     => 755,
+    }
+
+    file { '/etc/ansible/hosts':
+      ensure   => link,
+      target   => '/Users/indika/dev/config/misc/ansible.hosts.txt',
+      owner    => 'root',
+      group    => 'wheel',
+      mode     => 644,
+      require => File['dir_ansible-hosts']
     }
 
 }
