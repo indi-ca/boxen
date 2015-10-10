@@ -1,11 +1,25 @@
 class people::indika::applications::emacs {
 
-  package { 'Aquamacs':
-    provider => 'appdmg',
-    source   => 'https://dl.dropboxusercontent.com/u/8261661/resjBlDEvhYB3liuvOX/Aquamacs-Emacs-3.2.dmg',
-  }
 
   # Spacemacs configuration
+  vcsrepo { "/Users/indika/.emacs.d":
+    ensure   => present,
+    provider => git,
+    source   => 'https://github.com/syl20bnr/spacemacs',
+    revision => 'master',
+    owner    => 'indika',
+    group    => 'staff',
+  }
+
+  homebrew::tap { 'railwaycat/emacsmacport': }
+
+  package { 'emacs-mac':
+    ensure  => present,
+    install_options => [
+      '--with-spacemacs-icon',
+    ],
+    require => Vcsrepo['/Users/indika/.emacs.d']
+  }
 
   file { '/Users/indika/.spacemacs':
     ensure   => link,
