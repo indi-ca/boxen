@@ -11,6 +11,26 @@ class projects::netbox {
 
     package { 'awscli': }
 
+    # Appropriate files for site-update
+    file { '/Users/indika/VALID_SITES':
+      ensure   => link,
+      target   => '/Users/indika/dev/config/netbox/VALID_SITES',
+      owner    => $user,
+      group    => 'staff',
+      mode     => 644,
+      require  => Vcsrepo['/Users/indika/dev/config']
+    }
+
+    file { '/Users/indika/VALID_SCRIPTS':
+      ensure   => link,
+      target   => '/Users/indika/dev/config/netbox/VALID_SCRIPTS',
+      owner    => $user,
+      group    => 'staff',
+      mode     => 644,
+      require  => Vcsrepo['/Users/indika/dev/config']
+    }
+
+
   #   # They end up here
   #   #/opt/boxen/pyenv/versions
 

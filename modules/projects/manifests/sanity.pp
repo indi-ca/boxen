@@ -11,7 +11,7 @@ class projects::sanity {
 
   file { '/Users/indika/Library/LaunchAgents/com.hydrasquared.sanity.plist':
     ensure   => present,
-    source   => 'puppet:///modules/projects/sanity.plist',
+    source   => '/Users/indika/dev/sanity/responder/com.hydrasquared.sanity.responder.plist',
     owner    => 'indika',
     group    => 'staff',
     mode     => 644,
