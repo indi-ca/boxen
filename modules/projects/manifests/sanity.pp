@@ -18,18 +18,20 @@ class projects::sanity {
   }
 
 
-  # ensure a certain ruby version is used in a dir
-  ruby::local { '/Users/indika/dev/sanity/SanityInterface"':
-    version => '2.2.2',
-    require => Vcsrepo['/Users/indika/dev/sanity"']
-  }
+  # TODO: Figure out how to use local rubies
 
-  # ensure a gem is installed for a certain ruby version
-  # note, you can't have duplicate resource names so you have to name like so
-  $version = "2.2.2"
-  ruby_gem { "cocoapods for ${version}":
-    gem          => 'cocoapods',
-    ruby_version => $version,
-  }
+  # # ensure a certain ruby version is used in a dir
+  # ruby::local { '/Users/indika/dev/sanity/SanityInterface"':
+  #   version => '2.2.2',
+  #   require => Vcsrepo['/Users/indika/dev/sanity"']
+  # }
+
+  # # ensure a gem is installed for a certain ruby version
+  # # note, you can't have duplicate resource names so you have to name like so
+  # $version = "2.2.2"
+  # ruby_gem { "cocoapods for ${version}":
+  #   gem          => 'cocoapods',
+  #   ruby_version => $version,
+  # }
 
 }

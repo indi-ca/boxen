@@ -12,18 +12,18 @@ class projects::netbox {
     package { 'awscli': }
 
     # Appropriate files for site-update
-    file { '/Users/indika/VALID_SITES':
+    file { '/Users/indika/.valid_sites':
       ensure   => link,
-      target   => '/Users/indika/dev/config/netbox/VALID_SITES',
+      target   => '/Users/indika/dev/config/netbox/valid_sites',
       owner    => $user,
       group    => 'staff',
       mode     => 644,
       require  => Vcsrepo['/Users/indika/dev/config']
     }
 
-    file { '/Users/indika/VALID_SCRIPTS':
+    file { '/Users/indika/.valid_scripts':
       ensure   => link,
-      target   => '/Users/indika/dev/config/netbox/VALID_SCRIPTS',
+      target   => '/Users/indika/dev/config/netbox/valid_scripts',
       owner    => $user,
       group    => 'staff',
       mode     => 644,
