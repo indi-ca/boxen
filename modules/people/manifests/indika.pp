@@ -21,29 +21,29 @@ class people::indika {
     }
 
 
-    include people::indika::networking
-    include people::indika::git_config
-    include people::indika::frictionless
-    include people::indika::osx_settings
-    include people::indika::core_utils
-    include people::indika::fonts
+    # include people::indika::networking
+    # include people::indika::git_config
+    # include people::indika::frictionless
+    # include people::indika::osx_settings
+    # include people::indika::core_utils
+    # include people::indika::fonts
 
-    include people::indika::boxen_dev
-    include people::indika::applications
-    include people::indika::application_settings
-    include people::indika::homebrew_packages
-    include people::indika::nix
-    include people::indika::zsh
+    # include people::indika::boxen_dev
+    # include people::indika::applications
+    # include people::indika::application_settings
+    # include people::indika::homebrew_packages
+    # include people::indika::nix
+    # include people::indika::zsh
 
-    include people::indika::functional
+    # include people::indika::functional
 
-    # Projects
-    include people::indika::projects::graph
-    include projects::blog
-    include projects::netbox
-    include projects::course
+    # include people::indika::projects::graph
+    # include projects::blog
+    # include projects::netbox
+    # include projects::course
 
-    #include projects::truecrypt
+    #This is always commented out
+    ##include projects::truecrypt
 
 }
 
