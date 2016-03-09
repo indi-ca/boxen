@@ -22,7 +22,7 @@ class projects::netbox::mercurial {
 
   file { '/Users/indika/.hgrc':
     ensure   => link,
-    target   => '/Users/indika/dev/config/mercurial/.hgrc',
+    target   => '/Users/indika/dev/config/mercurial/.hgrc_nb',
     owner    => $user,
     group    => 'staff',
     mode     => 644,

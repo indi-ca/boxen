@@ -31,7 +31,7 @@ class projects::netbox {
     }
 
   # Python Dependencies
-  # click enum34 mercurial mercurial-keyring pydns simplejson Fabric Twisted==13.0.0 httplib2
+  # click enum34 pydns simplejson mercurial mercurial-keyring httplib2 Fabric Twisted==13.0.0
 
     python::package { "click for ${version2}":
       package => 'click',
@@ -68,8 +68,22 @@ class projects::netbox {
     python::package { "Twisted for ${version2}":
       package => 'Twisted',
       python  => '2.7.8',
-      version => '>=13.0.0,<14.0.0',
+      version => '>=13.0.0,<=15.4.0',
     }
+
+    # I need lxml for some of my scripts
+    # python::package { "Fabric for ${version2}":
+    #   package => 'Fabric',
+    #   python  => '2.7.8',
+    # }
+
+
+    # Python web dev dependencies
+    python::package { "watchdog for ${version2}":
+      package => 'watchdog',
+      python  => '2.7.8',
+    }
+
 
 
     $version3 = '3.4.1'
